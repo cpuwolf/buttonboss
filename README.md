@@ -34,7 +34,7 @@
 
 我们提供了简单易用的安装向导。
 
-![奎克质造设备安装程序](img/qmdevinstaller.gif)
+![奎克质造设备安装程序](img/qmdev_mac_install.gif)
 
 ## 安装说明
 
