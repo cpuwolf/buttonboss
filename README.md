@@ -69,9 +69,9 @@ KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0666", GROUP="input"
 
 ## 截图
 
-<img width="354" alt="插件截图1" src="https://gitee.com/cpuwolf/Quickmadedevice/assets/1320329/d13b6540-eba4-422a-98b9-1ef75fbf7c59">
-
-![插件设置界面](img/qmdev_setup.jpg)![零性能影响](img/nocost.jpg)
+![轻松调试](img/menu_reload.png)
+![插件设置界面](img/qmdev_setup.jpg)
+![零性能影响](img/nocost.jpg)
 
 ## 重大版本信息
 
