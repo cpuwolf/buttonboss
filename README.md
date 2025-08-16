@@ -41,21 +41,17 @@
 ### 在 Linux/MacOS 上安装
 
 #### **MacOS 安装步骤**
-1.  首先，请从 [java.com](https://www.java.com/en/download/) 下载并安装 Java。
-2.  打开“终端”并执行以下命令：
+1.  解压缩installer_6_8_mac.zip
+2.  打开“终端”并执行以下命令，可以允许没给苹果缴费的开发者：
     ```bash
-    java -jar Qmdev_Setup.jar
-    cd <您的X-Plane 12路径>/X-Plane 12/Resources/plugins/qmdev
-    xattr -dr com.apple.quarantine *
+    xattr -cr installer_6_8_mac.app
     ```
+3. 运行installer_6_8_mac.app
 
 #### **Ubuntu 18.04 安装步骤**
-```bash
-sudo apt install openjdk-11-jre
-java -jar Qmdev_Setup.jar
-```
+1. 运行installer_6_8_lin
 
-#### **Linux 手动配置**
+#### **Linux 设备无法找到的手动配置**
 
 您需要编辑 hidraw 设备的访问权限。
 ```bash
