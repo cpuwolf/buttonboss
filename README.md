@@ -72,7 +72,6 @@ KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0666", GROUP="input"
 ## 截图
 
 ![轻松调试](img/menu_reload.png)
-![插件设置界面](img/qmdev_setup.jpg)
 ![零性能影响](img/nocost.jpg)
 
 ## 重大版本信息
