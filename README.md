@@ -1,133 +1,116 @@
-# Quickmadedevice
+# Quickmadesim 设备驱动插件
 
-Quickmadedevice 是用于 X-Plane 11/12 的 USB 设备处理插件。它具有出色的可扩展性，可以自行添加更多飞机。
+本插件为 Quickmadesim 硬件设备的 X-Plane 11/12 驱动程序，提供 USB 连接支持。 它具有强大的可扩展性，您可以自行添加更多机型。内置的 Lua 语言引擎，让编程初学者也能轻松上手。
 
-其内置的 Lua 语言引擎对于编程初学者来说也很容易上手。
+官方网站：
+*   [https://x-plane.vip/quickmade/](https://x-plane.vip/quickmade/)
+*   支持 X-Plane 11/12/MSFS2020/2024，详情请访问：[https://www.quickmadesim.com/?page_id=194&lang=en](https://www.quickmadesim.com/?page_id=194&lang=en)
 
-https://x-plane.vip/quickmade/
+## 主要特性
 
-支持 X-Plane 11/12/MSFS2020/2024。
+*   **对游戏帧率 (FPS) 无影响**
+*   **摇杆按键自动分配**：免去手动设置上百个按键的烦恼
+*   **旋转编码器加速**
+*   **内置 Lua 语言引擎**
+*   **便捷的调试功能**：无需重启 X-Plane 即可即时重载 Lua 脚本文件
+*   **与飞机冷舱和黑屏状态同步**
+*   **与飞机模拟故障同步**
+*   **跨平台运行**：支持 Windows、Linux 和 Mac
+*   **原生支持 Apple ARM 架构**
 
-https://www.quickmadesim.com/?page_id=194&lang=en
+## 游戏兼容性列表
 
-# 功能特性
+请参阅此在线文档了解详细的兼容性列表：
+[https://docs.qq.com/sheet/DWERFQnRmVUFZeHBi?tab=00...](https://docs.qq.com/sheet/DWERFQnRmVUFZeHBi?tab=00...)
 
-*   零帧率（FPS）影响
-*   操纵杆按键自动分配（手动分配数百个按键非常痛苦）
-*   旋转编码器加速
-*   内置 Lua 语言引擎
-*   易于调试：无需重启 X-Plane 即可即时重新加载 Lua 文件
-*   飞机冷舱（cold and dark）同步
-*   飞机模拟故障同步
-*   支持 Win/Lin/Mac
-*   原生支持 Apple ARM 芯片
+## 软件下载
 
-## 游戏兼容性列表 ##
+您可以从以下地址下载最新版本的插件：
+[https://github.com/cpuwolf/Quickmadedevice/releases](https://github.com/cpuwolf/Quickmadedevice/releases)
 
-https://docs.qq.com/sheet/DWERFQnRmVUFZeHBi?tab=00...
+## 便捷的安装程序
 
-## 下载
+我们提供了一个安装程序，使安装过程更加简便。
 
-https://github.com/cpuwolf/Quickmadedevice/releases
+![qmdev 安装程序](img/qmdevinstaller.gif)
 
-## 提供安装程序
+## Lua 开发文档
 
-![qmdev](img/qmdevinstaller.gif)
+更多关于 Lua 脚本开发的文档，请访问我们的 Wiki 页面：
+[https://github.com/cpuwolf/Quickmadedevice/wiki](https://github.com/cpuwolf/Quickmadedevice/wiki)
 
-## 更多 Lua 开发者文档
+## 软件截图
 
-https://github.com/cpuwolf/Quickmadedevice/wiki
+<img width="354" alt="截屏2023-10-30 08 16 39" src="https://github.com/cpuwolf/Quickmadedevice/assets/1320329/d13b6540-eba4-422a-98b9-1ef75fbf75c9">
 
-## 截图 ##
-<img width="354" alt="截屏2023-10-30 08 16 39" src="https://github.com/cpuwolf/Quickmadedevice/assets/1320329/d13b6540-eba4-422a-98b9-1ef75fbf7c59">
+![qmdev 设置界面](img/qmdev_setup.jpg)![零帧率影响](img/nocost.jpg)
 
-![qmdev](img/qmdev_setup.jpg)
-![qmdev](img/nocost.jpg)
+### 在 Linux/MacOS 上安装
 
-### 在 Linux/MacOS 上安装 ###
-
-#### 在 MacOS 上安装 ####
-1.  从 (https://www.java.com/en/download/) 下载并安装 Java。
-2.  从终端执行以下命令：
+#### MacOS 安装步骤
+1.  从 [https://www.java.com/en/download/](https://www.java.com/en/download/) 下载并安装 Java。
+2.  打开“终端”并执行以下命令：
     ```
     java -jar Qmdev_Setup.jar
     cd <...>/X-Plane 12/Resources/plugins/qmdev
     xattr -dr com.apple.quarantine *
     ```
 
-#### 在 Ubuntu 18.04 上安装 ####
+#### Ubuntu 18.04 安装步骤
 ```
 sudo apt install openjdk-11-jre
 java -jar Qmdev_Setup.jar
 ```
 
-#### Linux 手动配置 ####
+#### Linux 手动配置
 
-编辑 hidraw 设备访问权限
-
+编辑 hidraw 设备访问权限：
+```
 sudo vim /etc/udev/rules.d/99-joysticks.rules
-
+```
+添加以下内容：
+```
 KERNEL=="event*", NAME="input/%k", MODE="0666", GROUP="input"
-
 KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0666", GROUP="input"
+```
 
-#### Linux 内核贡献 ####
-修复 Linux 内核操纵杆按钮最大数量限制
+#### Linux 内核贡献
+修复了 Linux 内核对摇杆最大按键数的限制。详情请见：
+[https://patchwork.kernel.org/patch/11657985/](https://patchwork.kernel.org/patch/11657985/)
 
-https://patchwork.kernel.org/patch/11657985/
+## 版本信息
 
-## 版本信息 ##
-### V2.0 ###
-进一步优化性能
-在 .cfg 中添加新关键字 DFKEY
-添加 disfast 数据引用以暂时禁用快速按键
-添加 QCDU, QG1K 设备
+### V6.3
+*   **重要提示：** 此更新需要您更新 QFCU 固件：[https://www.quickmadesim.com/?page_id=658&lang=en](https://www.quickmadesim.com/?page_id=658&lang=en)
+*   **核心变更：**
+    *   修复了 Qmdev 核心读取 Dataref 数值错误的 bug
+    *   更新至 X-Plane SDK 4.0.1
+    *   修复了一个 USB 日志错误
+*   **Lua 脚本变更：**
+    *   增加了对默认 XP12 A333 的 QFCU 支持
+    *   更新了 Toliss Airbus XP12 的 QFCU 亮度和电源逻辑
+    *   更新了 IXEG B737 classic plus XP12 的 QMCP737C 自动油门 LED 灯
+    *   更新了 ZIBO B737 XP12 的 QCDU EXEC 灯
+    *   以及更多针对 Flightfactor、Toliss 和 JarDesign 等机型的修复和更新
 
-### V5.0 ###
-移除对 FlyWithLua 的依赖，因为 Flywithlua 会影响帧率，不符合预期
-引入内置 ulua
+### V6.1
+*   在读取 lua 文件时增加了弹出窗口提示
 
-### V6.0 ###
-原生支持 MacOS M1
-移除所有 .cfg 文件，并将内容添加到 Lua 中
+### V6.0
+*   原生支持 MacOS M1
+*   移除了所有 .cfg 文件，其内容已整合进 lua 脚本
 
-### V6.1 ###
-读取 Lua 文件时添加弹出窗口
+### V5.0
+*   移除了对 FlyWithLua 的依赖，以解决其导致的帧率下降问题
+*   引入了内置的 ulua 引擎
 
-### V6.3 ###
+### V2.0
+*   进一步优化了性能
+*   在 .cfg 文件中增加了新的关键字 DFKEY
+*   增加了 disfast dataref 用于临时禁用快速按键
+*   增加了对 QCDU、QG1K 设备的支持
 
-此更新需要您更新 QFCU 固件
-https://www.quickmadesim.com/?page_id=658&lang=en
+## 开发者指南
 
-核心更改：
-
-*   Qmdev 核心修复了读取错误数据引用值的 Bug
-*   更新 X-Plane SDK 4.0.1
-*   修复了一个 USB 日志错误
-
-Lua 脚本更改：
-
-*   添加 QFCU 默认 XP12 A333 支持
-
-*   更新 Toliss Airbus XP12 QFCU 亮度控制更改
-*   更新 Toliss Airbus XP12 QFCU 开/关机逻辑
-*   更新 Toliss Airbus XP12 QCDU 开/关机逻辑
-*   更新 IXEG B737 classic plus XP12 QMCP737 A/T LED 灯
-*   更新 IXEG B737 classic plus XP12 QCDU EXEC 灯
-
-*   更新 ZIBO B737 XP12 QCDU EXEC 灯
-*   更新 Flightfactor B757 XP12 QCDU EXEC/MSG 灯
-*   更新 Flightfactor B757 XP12 QMCP737C IAS/MACH 逻辑
-*   更新 Flightfactor A320 XP12 QFCU 开/关机逻辑
-*   更新 Flightfactor A320 XP12 QCDU 开/关机逻辑
-
-*   修复 Toliss Airbus XP12 QFCU SPD/HDG 预选功能
-*   修复 Toliss Airbus XP12 QFCU EFIS Baro 偏差
-*   修复 Flightfactor A320 XP12 QFCU SPD/HDG 预选功能
-*   修复 JarDesign Airbus QFCU HDG/ALT/BARO 旋转功能
-
-## 开发者文档 ##
-
-如何编写自己的 .lua 脚本文件
-
-https://github.com/cpuwolf/Quickmadedevice/wiki/Qmdev-.lua-files
+如果您想学习如何编写自己的 .lua 脚本文件，请参阅我们的开发者文档：
+[https://github.com/cpuwolf/Quickmadedevice/wiki/Qmdev-.lua-files](https://github.com/cpuwolf/Quickmadedevice/wiki/Qmdev-.lua-files)
