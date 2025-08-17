@@ -40,7 +40,7 @@
 
 ## 安装说明
 
-### 在 Linux/MacOS 上安装
+### 在 MacOS 上安装
 
 #### **MacOS 安装步骤**
 1.  解压缩installer_6_8_mac.zip
@@ -49,6 +49,8 @@
     xattr -cr installer_6_8_mac.app
     ```
 3. 运行installer_6_8_mac.app
+
+### 在 Linux 上安装
 
 #### **Ubuntu 18.04 安装步骤**
 1. 运行installer_6_8_lin
