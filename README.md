@@ -1,3 +1,5 @@
+[中文 ](README.md) | [English](README_EN.md)
+
 
 # 奎克质造设备插件 (Qmdev)
 
