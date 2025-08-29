@@ -1,4 +1,4 @@
-# Quickmade Device Plugin (Qmdev)
+# QuickmadeSim Device Plugin (Qmdev)
 
 This is the QuickmadeSim device USB driver software designed for X-Plane 11/12 and MSFS 2020/2024.
 It boasts powerful extensibility, with a built-in Lua language engine that is very friendly to programming beginners, allowing you to easily add support for your own aircraft.
@@ -22,7 +22,7 @@ It boasts powerful extensibility, with a built-in Lua language engine that is ve
 ## Game Compatibility List
 
 Please check the detailed compatibility list via the following link:
-[Quickmade Device Game Compatibility List](https://docs.qq.com/sheet/DWERFQnRmVUFZeHBi?tab=00...)
+[Quickmade Device Game Compatibility List](https://docs.qq.com/sheet/DWERFQnRmVUFZeHBi?tab=000001)
 
 ## Download
 
@@ -33,11 +33,7 @@ You can get the latest version of the plugin from the following address:
 
 We provide an easy-to-use installation wizard.
 
-<p>
-
-<img src="https://gitee.com/cpuwolf/Quickmadedevice/raw/master/doc/img/qmdev_mac_install.gif" alt="Quickmade Device Installer">
-
-</p>
+![奎克质造设备安装程序](img/qmdev_mac_install.gif)
 
 ## Installation Instructions
 
@@ -78,17 +74,8 @@ We fixed the Linux kernel's limitation on the maximum number of joystick buttons
 
 ## Screenshots
 
-<p>
-
-<img src="https://gitee.com/cpuwolf/Quickmadedevice/raw/master/doc/img/menu_reload.png" alt="Easy Debugging">
-
-</p>
-
-<p>
-
-<img src="https://gitee.com/cpuwolf/Quickmadedevice/raw/master/doc/img/nocost.jpg" alt="Zero Performance Impact">
-
-</p>
+![轻松调试](img/menu_reload.png)
+![零性能影响](img/nocost.jpg)
 
 ## Major Version Information
 
