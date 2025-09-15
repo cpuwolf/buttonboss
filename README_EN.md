@@ -14,6 +14,7 @@ It boasts powerful extensibility, with a built-in Lua language engine that is ve
 *   **Rotary Knob Acceleration**: Optimizes your operational experience.
 *   **Built-in Lua Language Engine**: Simple to use and easy to customize.
 *   **Easy Debugging**: Instantly reload Lua scripts without restarting X-Plane, speeding up the development process.
+*   **Easy Debugging**：Automatically reload Lua scripts when the Lua file is changed, speeding up the debugging process.
 *   **Aircraft State Synchronization**: Supports cold and dark cockpit state synchronization.
 *   **Simulated Failure Synchronization**: Supports synchronization of simulated aircraft failure states.
 *   **Cross-platform Operation**: Fully supports Windows, Linux, and Mac systems.
