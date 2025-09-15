@@ -9,7 +9,7 @@
 
 
 **官方网站与支持:**
-*   跨平台支持 (X-Plane 11/12/MSFS2020/2024): https://www.quickmadesim.com/?page_id=194&lang=en
+*   跨平台支持 (X-Plane 11/12/MSFS2020/2024): https://x-plane.vip/quickmade/support/
 
 # 功能特性
 
