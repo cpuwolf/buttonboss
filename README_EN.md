@@ -30,6 +30,10 @@ It boasts powerful extensibility, with a built-in Lua language engine that is ve
 Please check the detailed compatibility list via the following link:
 [Quickmade Device Game Compatibility List](https://docs.qq.com/sheet/DWERFQnRmVUFZeHBi?tab=000001)
 
+## Contribute to Scripts
+
+https://github.com/cpuwolf/qmdevscripts
+
 ## Download
 
 You can get the latest version of the plugin from the following address:
