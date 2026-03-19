@@ -1,12 +1,14 @@
 [中文 ](README.md) | [English](README_EN.md)
 
 
-# 奎克质造设备插件 (Qmdev)
+# USB HID 插件 (Qmdev)
 
-这是为 X-Plane 11/12、MSFS 2020/2024 设计的奎克质造 (QuickmadeSim) 设备USB驱动软件。
+这是为 X-Plane 11/12 设计的USB HID驱动软件。
 它拥有强大的扩展性，插件内置了对编程初学者十分友好的 Lua 语言引擎，让您可以轻松为自己的飞机添加支持。
 
-
+# 硬件支持列表
+- 蜂窝油门Bravo
+- 奎克质造设备
 
 **官方网站与支持:**
 *   跨平台支持 (X-Plane 11/12/MSFS2020/2024): https://x-plane.vip/quickmade/support/
