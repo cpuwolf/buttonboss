@@ -1,7 +1,12 @@
-# QuickmadeSim Device Plugin (Qmdev)
+# USB HID Device Plugin (Qmdev)
 
-This is the QuickmadeSim device USB driver software designed for X-Plane 11/12 and MSFS 2020/2024.
+This is the USB HID device software designed for X-Plane 11/12 and MSFS 2020/2024.
 It boasts powerful extensibility, with a built-in Lua language engine that is very friendly to programming beginners, allowing you to easily add support for your own aircraft.
+
+# Hardware
+- Honeycomb Bravo
+- (to be added)
+- Quickmadesim QGMC710, QMCP737C, QG1K, QFCU, QCDU, QMPE, QMOVH-A, etc.
 
 **Official Website and Support:**
 * Cross-platform support (X-Plane 11/12/MSFS2020/2024): https://x-plane.vip/quickmade/support/
