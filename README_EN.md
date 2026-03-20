@@ -8,8 +8,10 @@ It boasts powerful extensibility, with a built-in Lua language engine that is ve
 - (to be added)
 - Quickmadesim QGMC710, QMCP737C, QG1K, QFCU, QCDU, QMPE, QMOVH-A, etc.
 
-**Official Website and Support:**
-* Cross-platform support (X-Plane 11/12/MSFS2020/2024): https://x-plane.vip/quickmade/support/
+## Game Compatibility List
+
+Please check the detailed compatibility list via the following link:
+[Device Game Compatibility List](https://docs.qq.com/sheet/DWERFQnRmVUFZeHBi?tab=000001)
 
 # Features
 
@@ -25,10 +27,7 @@ It boasts powerful extensibility, with a built-in Lua language engine that is ve
 *   **Cross-platform Operation**: Fully supports Windows, Linux, and Mac systems.
 *   **Native Apple ARM Support**: Provides native support for Apple M-series chips.
 
-## Game Compatibility List
 
-Please check the detailed compatibility list via the following link:
-[Quickmade Device Game Compatibility List](https://docs.qq.com/sheet/DWERFQnRmVUFZeHBi?tab=000001)
 
 ## Contribute to Scripts
 
