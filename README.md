@@ -10,8 +10,10 @@
 - 蜂窝油门Bravo
 - 奎克质造设备
 
-**官方网站与支持:**
-*   跨平台支持 (X-Plane 11/12/MSFS2020/2024): https://x-plane.vip/quickmade/support/
+## 游戏兼容性列表
+
+请通过以下链接查看详细的兼容性列表：
+[设备游戏兼容性列表](https://docs.qq.com/sheet/DWERFQnRmVUFZeHBi?tab=000001)
 
 # 功能特性
 
@@ -28,10 +30,7 @@
 *   **原生Apple ARM支持**：为苹果M系列芯片提供原生支持。
 *   **自定义设备**：生成.json文件，即可对设备增加支持
 
-## 游戏兼容性列表
 
-请通过以下链接查看详细的兼容性列表：
-[设备游戏兼容性列表](https://docs.qq.com/sheet/DWERFQnRmVUFZeHBi?tab=000001)
 
 ## 下载
 
