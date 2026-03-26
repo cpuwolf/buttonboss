@@ -20,7 +20,8 @@ Please check the detailed compatibility list via the following link:
 
 # Features
 
-*   **Zero Performance Impact**: Absolutely no impact on game frame rates (FPS).
+*   **Real-Time Add Device**: Json + Lua is a new Device without compiling code
+*   **Zero Performance Impact**: Absolutely Zero impact on game frame rates (FPS).
 *   **Automatic Flight Device Key Assignment**: Say goodbye to the pain of manually setting hundreds of keys.
 *   **Smooth Aircraft Switching**: Say goodbye to the hassle of searching the entire internet for configuration files.
 *   **Rotary Knob Acceleration**: Optimizes your operational experience.
@@ -31,7 +32,7 @@ Please check the detailed compatibility list via the following link:
 *   **Cross-platform Operation**: Fully supports Windows, Linux, and Mac systems.
 *   **Native Apple ARM Support**: Provides native support for Apple M-series chips.
 *   **JSON defined USB HID**: Add Json, add a USB HID Device
-*   **XP Skunkcrafts Support**: Easy update software small changes
+*   **Skunkcrafts Support**: Easy update software small changes
 
 
 
