@@ -84,7 +84,7 @@ qmpe:CfgCmd(26, "AirbusFBW/ACP1/CABPress")
 -- PA TX nop, Airbus PA send is not latched
 -- qmpe:CfgCmd(27, "1 (>L:S_ASP_PA_SEND)", "0 (>L:S_ASP_PA_SEND)")
 
-if not isINIA330 then
+if not isINIA330 and not isINIA340 then
     -- VHF1 RX volume
     qmpe:CfgEncFull(16, 17, "ckpt/oh/vhf1/1/anim", 10, 10, 1, 0, 270)
     -- VHF2 RX volume
@@ -225,8 +225,8 @@ if not isINIA340 then
     qmpe:CfgCmd(77, "AirbusFBW/AbrkMax")
 else
     -- autobrake
-    qmpe:CfgVal(75, "AirbusFBW/AutoBrkSel", 1, nil)
-    qmpe:CfgVal(76, "AirbusFBW/AutoBrkSel", 2, nil)
+    qmpe:CfgValT(75, "AirbusFBW/AutoBrkSel", 1, 0)
+    qmpe:CfgValT(76, "AirbusFBW/AutoBrkSel", 2, 0)
     --qmpe:CfgVal(77, "AirbusFBW/AutoBrkSel", 5, nil)
     local cmd_auto_rto = uluaFind("AirbusFBW/AbrkMax")
     local drf_brk_pos = iDataRef:New("AirbusFBW/AutoBrkSel")
@@ -235,7 +235,11 @@ else
     end
 
     function key_77_short_func()
-        drf_brk_pos:Set(5)
+        if drf_brk_pos:Get() == 5 then
+            drf_brk_pos:Set(0)
+        else
+            drf_brk_pos:Set(5)
+        end
     end
 
     qmpe:CfgLongFc(77, 1000, key_77_long_func, key_77_short_func)
@@ -543,8 +547,17 @@ else
     dr_bkl_power = iDataRef:New("AirbusFBW/ACBusVoltages[0]")              -- 0: OFF >0: ON
 end
 
-local drf_brk_sel = iDataRef:New("AirbusFBW/AutoBrkSel")
-local drf_brk_max = iDataRef:New("AirbusFBW/AutoBrkMax")
+local drf_brk_sel
+local drf_brk_max
+if isINIA340 then
+    drf_brk_sel = iDataRef:New("AirbusFBW/AutoBrkSel")
+    drf_brk_max = iDataRef:New("AirbusFBW/AutoBrkMax")
+end
+
+local ecam_lt_base = 0.2
+if oldversion then
+    ecam_lt_base = 0.4
+end
 
 function Qmpe_Toliss_loop()
     -- expert code: cold and dark
@@ -586,13 +599,11 @@ function Qmpe_Toliss_loop()
     qmpe:SetRmp()
     qmpe:SetAcp()
     if not isINIA330 and not isINIA340 then
-        qmpe:SetEcam()
+        qmpe:SetEcam(ecam_lt_base)
     else
-        qmpe:SetEcamAcDc()
+        qmpe:SetEcamAcDc(ecam_lt_base)
     end
     --qmpe:SetMisc()
-
-
     qmpe:SetWarn()
     qmpe:SetCaut()
 
