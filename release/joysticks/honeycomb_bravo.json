@@ -1,0 +1,110 @@
+{
+  "ProductName": "HCBravo",
+  "USB_VID": "0x294B",
+  "USB_PID": "0x1901",
+  "USBDelayMs": 30,
+  "LightKey": 7,
+  "LightKeyName": "AUTOPILOT",
+  "Functions": [
+    {
+      "FunName": "LED",
+      "USB_FEAT_length": 6,
+      "HeaderBytes": ["0x00"],
+      "FunIndex": 1,
+      "TestBytes": ["0x00", "0xFF", "0xD5", "0xFF", "0xFF", "0xF0"],
+      "OffBytes": ["0x00", "0x00", "0x00", "0x00", "0x00", "0x00"],
+      "LightBytes": ["0x00", "0x80", "0x00", "0x00", "0x00", "0x00"],
+      "SubFunctions": [
+        {
+          "int": "i8:28"
+        }
+      ],
+      "SubBitFunctions": [
+        {
+          "AP_hdg": "t8"
+        },
+        {
+          "AP_nav": "t9"
+        },
+        {
+          "AP_apr": "t10"
+        },
+        {
+          "AP_rev": "t11"
+        },
+        {
+          "AP_alt": "t12"
+        },
+        {
+          "AP_vs": "t13"
+        },
+        {
+          "AP_ias": "t14"
+        },
+        {
+          "AP_autopilot": "t15"
+        },
+        {
+          "Gear_LeftGreen": "t16"
+        },
+        {
+          "Gear_LeftRed": "t17"
+        },
+        {
+          "Gear_CenterGreen": "t18"
+        },
+        {
+          "Gear_CenterRed": "t19"
+        },
+        {
+          "Gear_RightGreen": "t20"
+        },
+        {
+          "Gear_RightRed": "t21"
+        },
+        {
+          "Light_MasterWarn": "t22"
+        },
+        {
+          "Light_EngineFire": "t23"
+        },
+        {
+          "Light_LowOil": "t24"
+        },
+        {
+          "Light_LowFuel": "t25"
+        },
+        {
+          "Light_Antiice": "t26"
+        },
+        {
+          "Light_Starter": "t27"
+        },
+        {
+          "Light_APU": "t28"
+        },
+        {
+          "Light_MasterCaution": "t29"
+        },
+        {
+          "Light_Vacuum": "t30"
+        },
+        {
+          "Light_LowHydPressURE": "t31"
+        },
+        {
+          "Lights_AuxFuelPump": "t32"
+        },
+        {
+          "Lights_ParkingBrake": "t33"
+        },
+        {
+          "Lights_LowVolts": "t34"
+        },
+        {
+          "Lights_door": "t35"
+        }
+      ]
+    }
+  ]
+}

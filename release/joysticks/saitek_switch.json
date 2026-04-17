@@ -1,0 +1,44 @@
+{
+  "ProductName": "StkSwitch",
+  "USB_VID": "0x06A3",
+  "USB_PID": "0x0D67",
+  "USBDelayMs": 60,
+  "LightKey": 18,
+  "LightKeyName": "Gear up",
+  "Functions": [
+    {
+      "FunName": "LED",
+      "USB_FEAT_length": 2,
+      "HeaderBytes": ["0x00"],
+      "FunIndex": 1,
+      "TestBytes": ["0x00", "0x07"],
+      "OffBytes": ["0x00", "0x00"],
+      "LightBytes": ["0x00", "0x01"],
+      "SubFunctions": [
+        {
+          "int": "i8:6"
+        }
+      ],
+      "SubBitFunctions": [
+        {
+          "GreenN": "t8"
+        },
+        {
+          "GreenL": "t9"
+        },
+        {
+          "GreenR": "t10"
+        },
+        {
+          "RedN": "t11"
+        },
+        {
+          "RedL": "t12"
+        },
+        {
+          "RedR": "t13"
+        }
+      ]
+    }
+  ]
+}
